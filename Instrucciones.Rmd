@@ -1,0 +1,34 @@
+---
+title: "App Documentation"
+author: "Sebastian Barreto"
+date: "9/4/2020"
+output: ioslides_presentation
+---
+
+
+## Instructions 
+
+This peer assessed assignment has two part: 
+
+1. You will create a Shiny application and deploy it on Rstudio's servers. 
+
+2. You will use Slidify or Rstudio Presenter to prepare a reproducible pitch presentation about your application.
+
+## What does the application do?
+
+The application allows you to emulate the toss of a coin, as many times **n** as you want, taking into consideration that it can be between 1 and 100 tosses. 
+
+This is a completely **random process** so it can give different results in each run
+
+## Code
+
+Here is an example:
+
+```{r 1, echo = TRUE}
+run.1 <- sample(x = c("Head", "Tail"), # The possible values of the coin
+                size = 10,  # 10 flips
+                replace = TRUE) # Sampling with replacement
+        
+result <- toString(run.1)
+result    
+```
